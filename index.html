@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Newson Sportec NS-01 EV Dirt Bike Concept</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #05080c;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 8, 12, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 170, 255, 0.25);
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .logo span {
+      color: #00aaff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      color: #d9e8f5;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00aaff;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 80px 6%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      background:
+        radial-gradient(circle at top right, rgba(0, 170, 255, 0.18), transparent 35%),
+        linear-gradient(135deg, #05080c, #101923);
+    }
+
+    .hero-text h1 {
+      font-size: clamp(44px, 7vw, 92px);
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 26px;
+    }
+
+    .hero-text h1 span {
+      color: #00aaff;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      color: #c8d8e6;
+      max-width: 720px;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #00aaff;
+      color: #041018;
+      box-shadow: 0 0 24px rgba(0, 170, 255, 0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 35px rgba(0, 170, 255, 0.7);
+    }
+
+    .btn-outline {
+      border: 1px solid #00aaff;
+      color: #00aaff;
+    }
+
+    .btn-outline:hover {
+      background: #00aaff;
+      color: #041018;
+    }
+
+    .hero-image {
+      padding: 10px;
+      border: 1px solid rgba(0, 170, 255, 0.3);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: 0 0 40px rgba(0, 170, 255, 0.16);
+    }
+
+    section {
+      padding: 90px 6%;
+    }
+
+    .section-header {
+      max-width: 950px;
+      margin-bottom: 45px;
+    }
+
+    .eyebrow {
+      color: #00aaff;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    .section-header p {
+      color: #c8d8e6;
+      font-size: 18px;
+      max-width: 900px;
+    }
+
+    .dark-panel {
+      background: #080d13;
+    }
+
+    .blue-panel {
+      background:
+        radial-gradient(circle at left, rgba(0, 170, 255, 0.12), transparent 35%),
+        #07111b;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 22px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 170, 255, 0.5);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .card p {
+      color: #c8d8e6;
+      font-size: 16px;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .feature {
+      border: 1px solid rgba(0, 170, 255, 0.25);
+      border-radius: 18px;
+      padding: 24px;
+      background: rgba(0, 170, 255, 0.06);
+    }
+
+    .feature h4 {
+      color: #00aaff;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .feature p {
+      color: #c8d8e6;
+      font-size: 15px;
+    }
+
+    .wide-image {
+      margin-top: 30px;
+      border: 1px solid rgba(0, 170, 255, 0.25);
+      border-radius: 22px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .contact {
+      text-align: center;
+      background:
+        radial-gradient(circle at center, rgba(0, 170, 255, 0.18), transparent 38%),
+        #05080c;
+    }
+
+    .contact h2 {
+      font-size: clamp(38px, 6vw, 76px);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      max-width: 850px;
+      margin: 0 auto 35px;
+      color: #c8d8e6;
+      font-size: 18px;
+    }
+
+    footer {
+      padding: 35px 6%;
+      text-align: center;
+      color: #9fb1c1;
+      background: #030507;
+      border-top: 1px solid rgba(0, 170, 255, 0.2);
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: #ffffff;
+    }
+
+    .concept-note {
+      margin-top: 18px;
+      color: #8fa4b7;
+      font-size: 13px;
+    }
+
+    @media (max-width: 1100px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .feature-list {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      section {
+        padding: 65px 5%;
+      }
+
+      .hero {
+        padding: 65px 5%;
+      }
+
+      .grid-2,
+      .grid-3,
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Newson <span>Sportec</span></div>
+
+    <div class="nav-links">
+      <a href="#concept">Concept</a>
+      <a href="#transport">Transport</a>
+      <a href="#testing">Testing</a>
+      <a href="#folding">Folding</a>
+      <a href="#engineering">Engineering</a>
+      <a href="#showroom">Showroom</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-text">
+      <div class="eyebrow">NS-01 Concept EV Dirt Bike</div>
+      <h1>Fold. Load. <span>Ride.</span></h1>
+      <p>
+        The Newson Sportec NS-01 Concept is a next-generation foldable hybrid electric dirt bike designed for
+        off-road performance, smart control, compact transport, and future-ready adventure mobility.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#concept" class="btn btn-primary">Explore Concept</a>
+        <a href="#contact" class="btn btn-outline">Business Inquiry</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/hero-ns01-concept.png" alt="Newson Sportec NS-01 EV dirt bike concept poster">
+    </div>
+  </header>
+
+  <section id="concept" class="dark-panel">
+    <div class="section-header">
+      <div class="eyebrow">Product Vision</div>
+      <h2>Built for the next generation</h2>
+      <p>
+        The NS-01 Concept combines electric torque, a removable battery pack, intelligent traction control,
+        connected ride data, and rugged off-road design. It is created as a product visualization for future
+        electric motocross development and market presentation.
+      </p>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature">
+        <h4>Electric Power</h4>
+        <p>Instant torque delivery for off-road riding.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Smart Control</h4>
+        <p>Ride modes, telemetry, battery status, and traction data.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Foldable Frame</h4>
+        <p>Compact design for easier loading and transport.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Adventure Ready</h4>
+        <p>Designed for mountain, desert, beach, and rocky terrain testing.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Service Friendly</h4>
+        <p>Battery removal and diagnostic workflow for future maintenance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="showroom" class="blue-panel">
+    <div class="section-header">
+      <div class="eyebrow">Market Presentation</div>
+      <h2>Showroom and Las Vegas show display</h2>
+      <p>
+        These images present the NS-01 Concept as a professional market-ready product for showroom display,
+        dealer introduction, trade show presentation, and future investor discussion.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <img src="images/showroom-display.png" alt="Newson Sportec NS-01 EV dirt bike in showroom">
+        <h3>Premium Showroom Display</h3>
+        <p>
+          A clean indoor product display for customer introduction, dealer presentation, and brand storytelling.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="images/las-vegas-show.png" alt="Newson Sportec NS-01 EV dirt bike at Las Vegas show">
+        <h3>Las Vegas Show Concept Booth</h3>
+        <p>
+          A professional trade show booth concept for introducing the NS-01 to the EV powersports market.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="transport" class="dark-panel">
+    <div class="section-header">
+      <div class="eyebrow">Real World Utility</div>
+      <h2>Load. Secure. Ride.</h2>
+      <p>
+        The NS-01 is designed for riders who need compact transportation without losing off-road capability.
+        The loading concept shows how the bike can support weekend riding, trail testing, and outdoor adventure.
+      </p>
+    </div>
+
+    <div class="wide-image">
+      <img src="images/toyota-4runner-loading.png" alt="Newson Sportec EV dirt bike loaded behind Toyota 4Runner">
+    </div>
+  </section>
+
+  <section id="folding" class="blue-panel">
+    <div class="section-header">
+      <div class="eyebrow">Foldable Design</div>
+      <h2>Compact transport system</h2>
+      <p>
+        The folding concept is one of the strongest market features. The system includes a foldable handlebar,
+        main frame hinge, rear folding section, compact mode, and pickup or SUV transport planning.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <img src="images/folding-process-main.png" alt="Newson Sportec folding process poster">
+        <h3>Folding Process</h3>
+        <p>
+          A step-by-step visual showing how the bike folds from riding mode into compact transport form.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="images/folding-technical-poster.png" alt="Technical folding electric dirt bike poster">
+        <h3>Technical Layout</h3>
+        <p>
+          A technical overview showing folded dimensions, loading concept, digital cluster, and product structure.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="images/hub-motor-technical.png" alt="Newson Sportec hub motor technical poster">
+        <h3>Hub Motor System</h3>
+        <p>
+          Front and rear hub motor visuals communicate the electric power direction and mechanical design concept.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testing" class="dark-panel">
+    <div class="section-header">
+      <div class="eyebrow">Field Testing</div>
+      <h2>Tested across real terrain</h2>
+      <p>
+        The NS-01 Concept is shown across mountain trails, downhill areas, rocky terrain, desert conditions,
+        river rocks, and beach sand. These images communicate durability, traction, power delivery, and adventure use.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <img src="images/mountain-black-suit-test.png" alt="Rider testing Newson Sportec EV dirt bike in hills">
+        <h3>Mountain Test</h3>
+        <p>
+          A rider tests torque, traction, and suspension response across mountain trail conditions.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="images/mountain-white-blue-test.png" alt="White and blue rider testing EV dirt bike in hills">
+        <h3>White-Blue Suit Test</h3>
+        <p>
+          A clean performance image showing the NS-01 in high-speed hill testing with a white and blue rider suit.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="images/downhill-test.png" alt="Rider testing EV dirt bike downhill">
+        <h3>Downhill Control</h3>
+        <p>
+          Downhill testing highlights braking control, balance, chassis stability, and off-road confidence.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="images/river-rock-test.png" alt="Rider crossing rocky river area with EV dirt bike">
+        <h3>River Rock Crossing</h3>
+        <p>
+          Wet rocky terrain testing shows traction, water resistance concept, and rider control.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="images/death-valley-test.png" alt="Newson Sportec EV dirt bike testing in Death Valley desert">
+        <h3>Death Valley Test</h3>
+        <p>
+          Desert testing focuses on dust resistance, heat endurance, and power delivery in dry terrain.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="images/newport-beach-test.png" alt="Newson Sportec EV dirt bike testing at Newport Beach">
+        <h3>Newport Beach Test</h3>
+        <p>
+          Beach testing shows lifestyle appeal, sand traction, and smooth electric power response.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="engineering" class="blue-panel">
+    <div class="section-header">
+      <div class="eyebrow">Engineering Workflow</div>
+      <h2>Diagnostics and battery service</h2>
+      <p>
+        After riding tests, engineers inspect electronic parts, battery health, power hubs, telemetry,
+        smart control pad data, and motor performance. The dedicated battery removal machine supports safer
+        service and professional maintenance planning.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <img src="images/engineering-diagnostics.png" alt="Engineers testing Newson Sportec EV dirt bike electronic parts">
+        <h3>Post-Ride Diagnostics</h3>
+        <p>
+          Engineers check electronic systems, ride data, battery condition, power output, and smart control connection.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="images/battery-removal-system.png" alt="Engineers using specific machine to remove EV dirt bike main battery">
+        <h3>Main Battery Removal System</h3>
+        <p>
+          A dedicated service machine supports controlled battery extraction, high-voltage safety, and diagnostic integration.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="smart-control" class="dark-panel">
+    <div class="section-header">
+      <div class="eyebrow">Connected Ride Modes</div>
+      <h2>Smart control pad and telemetry</h2>
+      <p>
+        The NS-01 smart control concept includes battery status, speed, ride mode, suspension settings,
+        traction control, GPS, telemetry, power output, temperature, and elevation.
+      </p>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature">
+        <h4>Eco</h4>
+        <p>Maximum range and efficient power use.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Trail</h4>
+        <p>Balanced control for mixed terrain.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Sport</h4>
+        <p>Dynamic performance for aggressive riding.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Race</h4>
+        <p>Maximum power for high-performance testing.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Custom</h4>
+        <p>Personalized settings for each rider.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Ready for Market Display</h2>
+    <p>
+      The Newson Sportec NS-01 Concept is designed for future product development, market visualization,
+      showroom display, and electric off-road performance storytelling.
+    </p>
+
+    <a href="mailto:newsonsportec@gmail.com" class="btn btn-primary">Contact Newson Sportec</a>
+  </section>
+
+  <footer>
+    <p>
+      <strong>Newson Sportec</strong> — Future. Performance. Dominance.
+    </p>
+
+    <p class="concept-note">
+      Concept Notice: The NS-01 EV Dirt Bike is a Newson Sportec concept design for product visualization,
+      market presentation, and future development planning. Final specifications, features, and production details may change.
+    </p>
+
+    <p class="concept-note">
+      © 2026 Newson Sportec. All concept images and brand presentation are for marketing visualization.
+    </p>
+  </footer>
+
+</body>
+</html>
