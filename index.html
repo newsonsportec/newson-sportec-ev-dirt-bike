@@ -42,29 +42,37 @@
       background: rgba(5, 8, 12, 0.94);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(0, 170, 255, 0.25);
-      padding: 18px 6%;
+      padding: 24px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 25px;
     }
 
+    /* Header logo x3 larger */
     .logo {
-      font-size: 26px;
-      font-weight: 800;
+      font-size: 78px;
+      font-weight: 900;
       letter-spacing: 4px;
       text-transform: uppercase;
+      line-height: 1;
+      white-space: nowrap;
     }
 
     .logo span {
       color: #00aaff;
     }
 
+    /* Header menu words x3 larger */
     .nav-links {
       display: flex;
-      gap: 20px;
-      font-size: 13px;
+      gap: 28px;
+      font-size: 39px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
+      font-weight: 800;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .nav-links a {
@@ -132,7 +140,7 @@
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
-      font-size: 14px;
+      font-size: 18px;
       transition: 0.3s;
     }
 
@@ -290,7 +298,7 @@
         linear-gradient(135deg, rgba(0, 170, 255, 0.12), rgba(255, 255, 255, 0.03));
     }
 
-    /* Do NOT enlarge this title */
+    /* Do not enlarge this title */
     .highlight-box h3 {
       font-size: 42px;
       text-transform: uppercase;
@@ -335,7 +343,7 @@
       color: #9fb1c1;
       background: #030507;
       border-top: 1px solid rgba(0, 170, 255, 0.2);
-      font-size: 14px;
+      font-size: 18px;
     }
 
     footer strong {
@@ -346,6 +354,22 @@
       margin-top: 18px;
       color: #8fa4b7;
       font-size: 18px;
+    }
+
+    @media (max-width: 1300px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo {
+        font-size: 52px;
+      }
+
+      .nav-links {
+        font-size: 28px;
+        justify-content: flex-start;
+      }
     }
 
     @media (max-width: 1100px) {
@@ -359,10 +383,6 @@
 
       .feature-list {
         grid-template-columns: 1fr 1fr;
-      }
-
-      .nav-links {
-        display: none;
       }
 
       .eyebrow {
@@ -390,7 +410,12 @@
       }
 
       .logo {
-        font-size: 20px;
+        font-size: 34px;
+      }
+
+      .nav-links {
+        font-size: 18px;
+        gap: 14px;
       }
 
       .eyebrow {
@@ -616,7 +641,7 @@
       </div>
 
       <div class="card">
-        <img src="rocky-river-test.png" onerror="this.onerror=null;this.src='river-rock-test.png';" alt="Rider crossing rocky river area with Newson Sportec EV dirt bike">
+        <img src="river-test.png" alt="Rider crossing rocky river area with Newson Sportec EV dirt bike">
         <h3>Rocky River Test</h3>
         <p>
           Wet rocky terrain testing shows traction, water resistance concept, and rider control.
