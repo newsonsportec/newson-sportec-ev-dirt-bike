@@ -88,13 +88,15 @@
         linear-gradient(135deg, #05080c, #101923);
     }
 
+    /* Blue words x4 larger */
     .eyebrow {
       color: #00aaff;
       text-transform: uppercase;
       letter-spacing: 4px;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 12px;
+      font-size: 56px;
+      font-weight: 800;
+      margin-bottom: 18px;
+      line-height: 1;
     }
 
     .hero-text h1 {
@@ -262,12 +264,14 @@
       background: rgba(0, 170, 255, 0.06);
     }
 
+    /* Blue feature titles x4 larger */
     .feature h4 {
       color: #00aaff;
-      margin-bottom: 12px;
+      margin-bottom: 18px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      font-size: 22px;
+      font-size: 88px;
+      line-height: 1;
     }
 
     .feature p {
@@ -286,6 +290,7 @@
         linear-gradient(135deg, rgba(0, 170, 255, 0.12), rgba(255, 255, 255, 0.03));
     }
 
+    /* Do NOT enlarge this title */
     .highlight-box h3 {
       font-size: 42px;
       text-transform: uppercase;
@@ -359,6 +364,14 @@
       .nav-links {
         display: none;
       }
+
+      .eyebrow {
+        font-size: 42px;
+      }
+
+      .feature h4 {
+        font-size: 54px;
+      }
     }
 
     @media (max-width: 700px) {
@@ -378,6 +391,14 @@
 
       .logo {
         font-size: 20px;
+      }
+
+      .eyebrow {
+        font-size: 32px;
+      }
+
+      .feature h4 {
+        font-size: 38px;
       }
 
       .hero-text p,
@@ -595,7 +616,7 @@
       </div>
 
       <div class="card">
-        <img src="rocky-river-test.png" alt="Rider crossing rocky river area with Newson Sportec EV dirt bike">
+        <img src="rocky-river-test.png" onerror="this.onerror=null;this.src='river-rock-test.png';" alt="Rider crossing rocky river area with Newson Sportec EV dirt bike">
         <h3>Rocky River Test</h3>
         <p>
           Wet rocky terrain testing shows traction, water resistance concept, and rider control.
