@@ -127,39 +127,42 @@
 
     .hero-buttons {
       display: flex;
-      gap: 18px;
+      gap: 28px;
       flex-wrap: wrap;
     }
 
+    /* Blue buttons x2 larger */
     .btn {
-      padding: 17px 32px;
+      padding: 34px 64px;
       border-radius: 999px;
-      font-weight: 800;
-      letter-spacing: 1px;
+      font-weight: 900;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      font-size: 20px;
+      font-size: 40px;
       transition: 0.3s;
+      display: inline-block;
     }
 
     .btn-primary {
       background: #00aaff;
       color: #041018;
-      box-shadow: 0 0 24px rgba(0, 170, 255, 0.45);
+      box-shadow: 0 0 34px rgba(0, 170, 255, 0.55);
     }
 
     .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 35px rgba(0, 170, 255, 0.7);
+      transform: translateY(-4px);
+      box-shadow: 0 0 50px rgba(0, 170, 255, 0.8);
     }
 
     .btn-outline {
-      border: 1px solid #00aaff;
+      border: 3px solid #00aaff;
       color: #00aaff;
     }
 
     .btn-outline:hover {
       background: #00aaff;
       color: #041018;
+      box-shadow: 0 0 45px rgba(0, 170, 255, 0.65);
     }
 
     .hero-image {
@@ -326,7 +329,7 @@
 
     .contact p {
       max-width: 1250px;
-      margin: 0 auto 38px;
+      margin: 0 auto 48px;
       color: #c8d8e6;
       font-size: clamp(30px, 3.5vw, 56px);
       line-height: 1.15;
@@ -370,6 +373,11 @@
 
       .feature h4 {
         font-size: 38px;
+      }
+
+      .btn {
+        font-size: 34px;
+        padding: 30px 54px;
       }
     }
 
@@ -431,6 +439,13 @@
 
       .feature h4 {
         font-size: 34px;
+      }
+
+      .btn {
+        font-size: 26px;
+        padding: 24px 40px;
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
